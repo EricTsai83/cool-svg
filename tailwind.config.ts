@@ -8,9 +8,30 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      keyframes: {
+        wave: {
+          "0%,  100%": {
+            transform: "rotate(0deg)",
+          },
+          "20%": {
+            transform: "rotate(-25deg)",
+          },
+          "40%": {
+            transform: "rotate(10deg)",
+          },
+          "60%": {
+            transform: "rotate(-25deg)",
+          },
+          "80%": {
+            transform: "rotate(10deg)",
+          },
+        },
+      },
+      animation: {
+        wave: "wave 560ms ease-in-out",
+      },
+      transformOrigin: {
+        custom: "130px 106px",
       },
     },
   },
